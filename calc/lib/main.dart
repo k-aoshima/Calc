@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'key_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,9 +44,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       backgroundColor: Colors.black,
       body: SafeArea(child: GestureDetector(
         onTap: ()=>FocusScope.of(context).unfocus(),
@@ -82,93 +80,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // AC
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0xA6FFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                'AC',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.AC).KeyButton('AC'),
                         // +/-
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0xA6FFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '+/-',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.PlusMinus).KeyButton('+/-'),
                         // %
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0xA6FFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '%',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Persent).KeyButton('%'),
                         // ÷
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color.fromARGB(255, 67, 30, 236)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '÷',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Division).KeyButton('÷'),
                       ],
                     ),
                   ),
@@ -181,93 +99,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // 7
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '7',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('7'),
                         // 8
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '8',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('8'),
                         // 9
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '9',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('9'),
                         // ×
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color.fromARGB(255, 67, 30, 236)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '×',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Multiplication).KeyButton('×'),
                       ],
                     ),
                   ),
@@ -280,93 +118,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // 4
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '4',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('4'),
                         // 5
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '5',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('5'),
                         // 6
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '6',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('6'),
                         // -
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color.fromARGB(255, 67, 30, 236)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '-',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Minus).KeyButton('-'),
                       ],
                     ),
                   ),
@@ -379,93 +137,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // 1
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('1'),
                         // 2
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '2',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('2'),
                         // 3
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '3',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Normal).KeyButton('3'),
                         // +
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color.fromARGB(255, 67, 30, 236)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '+',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Plus).KeyButton('+'),
                       ],
                     ),
                   ),
@@ -477,72 +155,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // 1
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 167,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '0',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        // 0
+                        KeyWidget(KeyType.Zero).KeyButton('0'),
                         // .
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0x3EFFFFFF)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '.',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Period).KeyButton('.'),
                         // =
-                        Padding(padding: EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
-                          child: SizedBox(
-                            width: 80,
-                            height: 80,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Color.fromARGB(255, 67, 30, 236)
-                              ),
-                              onPressed: (){
-                              },
-                              child: Text(
-                                '=',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        KeyWidget(KeyType.Equal).KeyButton('='),
                       ],
                     ),
                   ),
@@ -551,11 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       )),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), 
+      
     );
   }
 }
